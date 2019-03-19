@@ -210,7 +210,10 @@ __webpack.config.js__
       print: './src/print.js'
     },
     plugins: [
-+     new CleanWebpackPlugin(['dist']),
+-     new CleanWebpackPlugin(['dist']),
+      // 现在不需要这么做了，会报错，现在是传递一个配置对象，我的用的版本是 4.29，
+      // 它应该是自动清除上面配置从出口目录里面的文件，
++     new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         title: 'Output Management'
       })
